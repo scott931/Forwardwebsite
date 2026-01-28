@@ -22,6 +22,118 @@
         html.w-mod-js:not(.w-mod-ix3) :is(.leaf-2, .story-container, .flower-2) {
             visibility: hidden !important;
         }
+        
+        /* Override banner colors - Add your custom colors here */
+        :root {
+            /* Banner background color (dark green) */
+            --_variable-collection---dark-green-b: #1b2644; /* Change this to your desired banner background color */
+            
+            /* Button background color (bright yellow-green) */
+            --_variable-collection---accent-green-100: #1e293b; /* Change this to your desired button color */
+            
+            /* Text color (pale green/yellow-green) */
+            --_variable-collection---pale-green-100: #eef6cb; /* Change this to your desired text color */
+            
+            /* Button text color - customizable */
+            --button-text-color: #1b2644; /* Change this to your desired button text color */
+        }
+        
+        /* Direct override for hero-container if needed */
+        .hero-container {
+            /* Uncomment and change the color below to override banner background directly */
+            /* background-color: #your-color-here !important; */
+        }
+        
+        /* Banner Text Styling */
+        .hero-container .h1-main {
+            /* Main heading: "Moving Africa Forward." */
+            /* Current: White (#fff), 48px, serif font, text shadow */
+            color: var(--_variable-collection---white-100);
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 48px;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.64);
+        }
+        
+        .hero-container .p {
+            /* Subheading/description text */
+            /* Current: Pale green (#eef6cb), 24px, sans-serif, text shadow */
+            color: var(--_variable-collection---pale-green-100);
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 32px;
+            text-shadow: 0 4px 24px rgba(0, 0, 0, 0.64);
+        }
+        
+        /* Remove background from parent button container wrapper */
+        .hero-container .hero-content-wrapper > .button-style {
+            background-color: transparent !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+            max-width: none !important;
+        }
+        
+        /* Button Styling Improvements - Red buttons with white text */
+        /* Target only the nested button divs (actual buttons) */
+        .hero-container .button-style .button-style {
+            /* Button container styling - Red background */
+            background-color: #dc2626 !important; /* Red color for better visibility */
+            border-radius: 8px;
+            padding: 16px 24px;
+            max-width: 320px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        /* Button hover effects */
+        .hero-container .button-style .button-style:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(220, 38, 38, 0.4);
+            background-color: #b91c1c !important; /* Darker red on hover */
+            filter: brightness(1.05);
+        }
+        
+        .hero-container .button-style .button-style:active {
+            transform: translateY(0);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.24);
+            background-color: #991b1b !important; /* Even darker red on click */
+        }
+        
+        /* Button text styling - White text */
+        .hero-container .button-text {
+            color: #ffffff !important; /* White text for better visibility */
+            font-family: bureau-sans, Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 24px;
+            transition: color 0.3s ease;
+        }
+        
+        /* Button text hover effect */
+        .hero-container .button-style:hover .button-text {
+            color: #ffffff !important; /* Keep white on hover */
+        }
+        
+        /* Direct override for buttons if needed */
+        .button-style {
+            /* Uncomment and change the color below to override button background directly */
+            /* background-color: #your-color-here !important; */
+        }
+        
+        /* Fix for circle-large image - ensure it displays correctly */
+        .circle-large-anim {
+            border: none !important;
+            outline: none !important;
+            display: block;
+        }
+        
+        .circle-large-anim[src=""],
+        .circle-large-anim:not([src]) {
+            display: none;
+        }
     </style>
     <script type="text/javascript">
         ! function(o, c) {
@@ -233,9 +345,8 @@
             loading="lazy" />
         <div data-w-id="26c12bd8-c780-ed86-2c27-a6d071b318cc" style="opacity:0" class="div-block-3">
             <div class="div-block">
-                <div class="div-block-4"><img src="https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small.avif" loading="eager" width="1000" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small-p-500.avif 500w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small-p-800.avif 800w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small-p-1080.avif 1080w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small.avif 2000w"
-                        class="circle-small-anim" /></div><img src="https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dc_circle-large.avif" loading="eager" width="1338" sizes="100vw" alt="" srcset="https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dc_circle-large-p-500.avif 500w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dc_circle-large-p-800.avif 800w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dc_circle-large-p-1080.avif 1080w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dc_circle-large-p-1600.avif 1600w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dc_circle-large.avif 2676w"
-                    class="circle-large-anim" /></div>
+                <div class="div-block-4"><img src="../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif" loading="eager" width="1000" sizes="100vw" alt="" srcset="../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 500w, ../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 800w, ../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 1080w, ../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 2000w"
+                        class="circle-small-anim" /></div></div>
         </div>
     </section>
     <section data-figma-id="1591:4557" class="social-proof-section">
@@ -871,26 +982,26 @@
         </div>
     </section>
     <section data-figma-id="1591:5084" class="partner-section" style="padding: 80px 20px;">
-        <p data-figma-id="1591:5085" class="subtitle-2 text-h6" style="text-align: center; margin-bottom: 60px; font-size: 1.5em;">Our Strategic Ecosystem</p>
+        <p data-figma-id="1591:5085" class="subtitle-2 text-h6" style="text-align: center; margin-bottom: 60px; font-size: 1.5em; font-family: inherit;">Our Strategic Ecosystem</p>
         <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <div style="padding: 30px; background: rgba(255,255,255,0.05); border-radius: 8px;">
-                <h3 style="font-size: 1.8em; margin-bottom: 20px;">🎓 Education &amp; Leadership</h3>
-                <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                    <li style="margin-bottom: 15px;"><strong>Forward International:</strong> Our executive development platform, fellowship programs, and accelerators for the continent's senior talent.</li>
-                    <li style="margin-bottom: 15px;"><strong>FWD Learn:</strong> Democratizing knowledge through mass-scale digital learning for all Africans.</li>
-                    <li style="margin-bottom: 15px;"><strong>Grow Develop Africa:</strong> Our Think Tank, targeting leaders across all sectors to shape development policy.</li>
+                <h3 style="font-size: 1.8em; margin-bottom: 20px; font-family: inherit;">Education &amp; Leadership</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8; font-family: inherit;">
+                    <li style="margin-bottom: 15px; font-family: inherit;"><strong>Forward International:</strong> Our executive development platform, fellowship programs, and accelerators for the continent's senior talent.</li>
+                    <li style="margin-bottom: 15px; font-family: inherit;"><strong>FWD Learn:</strong> Democratizing knowledge through mass-scale digital learning for all Africans.</li>
+                    <li style="margin-bottom: 15px; font-family: inherit;"><strong>Grow Develop Africa:</strong> Our Think Tank, targeting leaders across all sectors to shape development policy.</li>
                 </ul>
             </div>
             <div style="padding: 30px; background: rgba(255,255,255,0.05); border-radius: 8px;">
-                <h3 style="font-size: 1.8em; margin-bottom: 20px;">💰 Capital &amp; Investment</h3>
-                <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                    <li style="margin-bottom: 15px;"><strong>Albatross Capital:</strong> Our strategic investment arm. Utilizing a "long-view" philosophy to manage group capital, and scale high-potential African organizations.</li>
+                <h3 style="font-size: 1.8em; margin-bottom: 20px; font-family: inherit;">Capital &amp; Investment</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8; font-family: inherit;">
+                    <li style="margin-bottom: 15px; font-family: inherit;"><strong>Albatross Capital:</strong> Our strategic investment arm. Utilizing a "long-view" philosophy to manage group capital, and scale high-potential African organizations.</li>
                 </ul>
             </div>
             <div style="padding: 30px; background: rgba(255,255,255,0.05); border-radius: 8px;">
-                <h3 style="font-size: 1.8em; margin-bottom: 20px;">🏥 Healthcare &amp; Vitality</h3>
-                <ul style="list-style: none; padding: 0; line-height: 1.8;">
-                    <li style="margin-bottom: 15px;"><strong>Forward Health:</strong> (Future Vertical) A network of specialized centers—including Neuro and Cardio excellence—and a robust pharmaceutical distribution chain across Kenya and beyond.</li>
+                <h3 style="font-size: 1.8em; margin-bottom: 20px; font-family: inherit;">Healthcare &amp; Vitality</h3>
+                <ul style="list-style: none; padding: 0; line-height: 1.8; font-family: inherit;">
+                    <li style="margin-bottom: 15px; font-family: inherit;"><strong>Forward Health:</strong> (Future Vertical) A network of specialized centers—including Neuro and Cardio excellence—and a robust pharmaceutical distribution chain across Kenya and beyond.</li>
                 </ul>
             </div>
         </div>
@@ -961,7 +1072,7 @@
     </section>
     <section class="cta-section">
         <div class="frame-1410222050">
-            <div class="div-block-6"><img src="https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small.avif" loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" srcset="https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small-p-500.avif 500w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small-p-800.avif 800w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small-p-1080.avif 1080w, https://cdn.prod.website-files.com/68ece821879edc4e9b4806cc/68ece821879edc4e9b4806dd_circle-small.avif 2000w"
+            <div class="div-block-6"><img src="../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif" loading="lazy" sizes="(max-width: 2000px) 100vw, 2000px" srcset="../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 500w, ../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 800w, ../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 1080w, ../cdn.prod.website-files.com/68ece821879edc4e9b4806cc/Group458.avif 2000w"
                     alt="" class="image-19" /></div>
             <div class="container-10">
                 <div class="title-style" style="font-style: italic; font-size: 2em; margin-bottom: 30px;">Building People is Building a Better Future</div>
